@@ -1,7 +1,9 @@
 # clickjacking-poc
 
 A defensive, educational example of browser frame protection. The mock account
-action changes no state, and the app sends no messages to a parent window.
+notice is a clearly labeled, non-branded training interface. Its button only
+shows a local confirmation; the app collects no account or password data and
+sends no messages to a parent window.
 
 The target deliberately blocks embedding with
 `Content-Security-Policy: frame-ancestors 'none'` and
@@ -16,8 +18,8 @@ pnpm install
 pnpm dev -- --port 3001
 ```
 
-Open [http://localhost:3001](http://localhost:3001). The visible mock action
-only displays a confirmation that no account state changed.
+Open [http://localhost:3001](http://localhost:3001). The demo-guidance button
+only displays a local confirmation that no account was checked or changed.
 
 ## Deploy to Vercel
 
